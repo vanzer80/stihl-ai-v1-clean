@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STIHL AI Builder - Construção Autônoma de Banco de Dados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+        .step-card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+        .step-number {
+            background: #ff6b35;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .upload-area {
+            border: 2px dashed #dee2e6;
+            border-radius: 10px;
+            padding: 3rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .upload-area:hover {
+            border-color: #ff6b35;
+            background-color: #fff5f2;
+        }
+        .upload-area.dragover {
+            border-color: #ff6b35;
+            background-color: #fff5f2;
+        }
+        .progress-step {
+            display: none;
+        }
+        .progress-step.active {
+            display: block;
+        }
+        .log-container {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 1rem;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .log-entry {
+            margin-bottom: 0.5rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+        }
+        .log-info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+        .log-success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .log-error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .log-warning {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #ff6b35 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-robot me-2"></i>
+                STIHL AI Builder
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#features">Recursos</a>
+                <a class="nav-link" href="#builder">Construtor</a>
+                <a class="nav-link" href="#docs">Documentação</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">
+                <i class="fas fa-magic me-3"></i>
+                IA Autônoma para Construção de Banco de Dados
+            </h1>
+            <p class="lead mb-4">
+                Transforme sua planilha Excel STIHL em um banco de dados completo e otimizado no Supabase
+                com inteligência artificial avançada
+            </p>
+            <a href="#builder" class="btn btn-light btn-lg">
+                <i class="fas fa-rocket me-2"></i>
+                Começar Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="fw-bold">Recursos da IA Autônoma</h2>
+                    <p class="text-muted">Tecnologia avançada para automação completa</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card step-card text-center p-4">
+                        <i class="fas fa-brain feature-icon"></i>
+                        <h5>Análise Inteligente</h5>
+                        <p class="text-muted">
+                            IA analisa automaticamente a estrutura da planilha Excel,
+                            identificando produtos, categorias e relacionamentos
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card step-card text-center p-4">
+                        <i class="fas fa-database feature-icon"></i>
+                        <h5>Criação Automática</h5>
+                        <p class="text-muted">
+                            Gera automaticamente tabelas, índices, funções SQL
+                            e políticas de segurança otimizadas para busca
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card step-card text-center p-4">
+                        <i class="fas fa-search feature-icon"></i>
+                        <h5>Busca Inteligente</h5>
+                        <p class="text-muted">
+                            Sistema de busca semântica com IA integrada,
+                            suporte a consultas em linguagem natural
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Builder Section -->
+    <section id="builder" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold">Construtor Autônomo</h2>
+                    <p class="text-muted">Siga os passos para construir seu banco de dados automaticamente</p>
+                </div>
+            </div>
+
+            <!-- Step 1: Upload File -->
+            <div class="progress-step active" id="step-upload">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">
+                                    <span class="step-number">1</span>
+                                    Upload da Planilha Excel
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="upload-area" id="uploadArea">
+                                    <i class="fas fa-cloud-upload-alt fa-3x text-muted mb-3"></i>
+                                    <h5>Arraste sua planilha Excel aqui</h5>
+                                    <p class="text-muted">ou clique para selecionar arquivo</p>
+                                    <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" style="display: none;">
+                                    <small class="text-muted">Formatos suportados: .xlsx, .xls, .csv (máx. 50MB)</small>
+                                </div>
+                                <div id="fileInfo" class="mt-3" style="display: none;">
+                                    <div class="alert alert-info">
+                                        <i class="fas fa-file-excel me-2"></i>
+                                        <span id="fileName"></span>
+                                        <span class="badge bg-secondary ms-2" id="fileSize"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Database Configuration -->
+            <div class="progress-step" id="step-config">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header bg-warning text-dark">
+                                <h5 class="mb-0">
+                                    <span class="step-number">2</span>
+                                    Configuração do Supabase
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="configForm">
+                                    <div class="mb-3">
+                                        <label for="supabaseUrl" class="form-label">URL do Projeto Supabase</label>
+                                        <input type="url" class="form-control" id="supabaseUrl" 
+                                               placeholder="https://seu-projeto.supabase.co" required>
+                                        <div class="form-text">URL do seu projeto no Supabase</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="supabaseKey" class="form-label">Chave de API (Service Role)</label>
+                                        <input type="password" class="form-control" id="supabaseKey" 
+                                               placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." required>
+                                        <div class="form-text">Chave de service role para operações administrativas</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="databaseUrl" class="form-label">String de Conexão PostgreSQL</label>
+                                        <input type="text" class="form-control" id="databaseUrl" 
+                                               placeholder="postgresql://postgres:senha@db.projeto.supabase.co:5432/postgres" required>
+                                        <div class="form-text">String de conexão direta com o PostgreSQL</div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <button type="button" class="btn btn-secondary" onclick="previousStep()">
+                                            <i class="fas fa-arrow-left me-2"></i>Voltar
+                                        </button>
+                                        <button type="button" class="btn btn-primary" onclick="validateConnection()">
+                                            <i class="fas fa-check me-2"></i>Validar Conexão
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Analysis -->
+            <div class="progress-step" id="step-analysis">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="card">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0">
+                                    <span class="step-number">3</span>
+                                    Análise da Planilha
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div id="analysisResults"></div>
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button type="button" class="btn btn-secondary" onclick="previousStep()">
+                                        <i class="fas fa-arrow-left me-2"></i>Voltar
+                                    </button>
+                                    <button type="button" class="btn btn-success" onclick="startAutonomousBuild()">
+                                        <i class="fas fa-magic me-2"></i>Construir Automaticamente
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Building -->
+            <div class="progress-step" id="step-building">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0">
+                                    <span class="step-number">4</span>
+                                    Construção do Banco de Dados
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                                         id="buildProgress" role="progressbar" style="width: 0%"></div>
+                                </div>
+                                <div id="buildLog" class="log-container"></div>
+                                <div id="buildResults" class="mt-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold">Como Funciona</h2>
+                    <p class="text-muted">Processo automatizado em 4 etapas simples</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card step-card text-center p-4">
+                        <div class="step-number mx-auto">1</div>
+                        <h6>Upload & Análise</h6>
+                        <p class="text-muted small">
+                            IA analisa a estrutura da planilha Excel identificando produtos,
+                            categorias e relacionamentos automaticamente
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card step-card text-center p-4">
+                        <div class="step-number mx-auto">2</div>
+                        <h6>Extração Inteligente</h6>
+                        <p class="text-muted small">
+                            Extrai dados de forma inteligente, normalizando informações
+                            e criando relacionamentos entre entidades
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card step-card text-center p-4">
+                        <div class="step-number mx-auto">3</div>
+                        <h6>Geração de SQL</h6>
+                        <p class="text-muted small">
+                            Gera scripts SQL otimizados incluindo tabelas, índices,
+                            funções e políticas de segurança
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card step-card text-center p-4">
+                        <div class="step-number mx-auto">4</div>
+                        <h6>Implementação</h6>
+                        <p class="text-muted small">
+                            Executa automaticamente no Supabase criando um sistema
+                            completo de busca inteligente
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">
+                <i class="fas fa-robot me-2"></i>
+                STIHL AI Builder - Powered by Manus AI
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let currentStep = 1;
+        let selectedFile = null;
+        let analysisData = null;
+
+        // Upload handling
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const fileInfo = document.getElementById('fileInfo');
+
+        uploadArea.addEventListener('click', () => fileInput.click());
+        uploadArea.addEventListener('dragover', handleDragOver);
+        uploadArea.addEventListener('drop', handleDrop);
+        fileInput.addEventListener('change', handleFileSelect);
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        }
+
+        function handleFileSelect(e) {
+            if (e.target.files.length > 0) {
+                handleFile(e.target.files[0]);
+            }
+        }
+
+        function handleFile(file) {
+            selectedFile = file;
+            document.getElementById('fileName').textContent = file.name;
+            document.getElementById('fileSize').textContent = formatFileSize(file.size);
+            fileInfo.style.display = 'block';
+            
+            // Enable next step
+            setTimeout(() => nextStep(), 1000);
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        // Step navigation
+        function nextStep() {
+            if (currentStep < 4) {
+                document.getElementById(`step-${getStepName(currentStep)}`).classList.remove('active');
+                currentStep++;
+                document.getElementById(`step-${getStepName(currentStep)}`).classList.add('active');
+                
+                if (currentStep === 3) {
+                    analyzeFile();
+                }
+            }
+        }
+
+        function previousStep() {
+            if (currentStep > 1) {
+                document.getElementById(`step-${getStepName(currentStep)}`).classList.remove('active');
+                currentStep--;
+                document.getElementById(`step-${getStepName(currentStep)}`).classList.add('active');
+            }
+        }
+
+        function getStepName(step) {
+            const steps = ['', 'upload', 'config', 'analysis', 'building'];
+            return steps[step];
+        }
+
+        // API calls
+        async function validateConnection() {
+            const databaseUrl = document.getElementById('databaseUrl').value;
+            
+            if (!databaseUrl) {
+                alert('Por favor, forneça a string de conexão do banco de dados');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/ai/validate-connection', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ database_url: databaseUrl })
+                });
+
+                const result = await response.json();
+                
+                if (result.success) {
+                    alert('Conexão validada com sucesso!');
+                    nextStep();
+                } else {
+                    alert('Erro na conexão: ' + result.error);
+                }
+            } catch (error) {
+                alert('Erro ao validar conexão: ' + error.message);
+            }
+        }
+
+        async function analyzeFile() {
+            if (!selectedFile) return;
+
+            const formData = new FormData();
+            formData.append('file', selectedFile);
+
+            try {
+                const response = await fetch('/api/ai/analyze-excel', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+                
+                if (result.success) {
+                    analysisData = result.analysis;
+                    displayAnalysisResults(result.analysis);
+                } else {
+                    alert('Erro na análise: ' + (result.errors ? result.errors.join(', ') : result.error));
+                }
+            } catch (error) {
+                alert('Erro ao analisar arquivo: ' + error.message);
+            }
+        }
+
+        function displayAnalysisResults(analysis) {
+            const container = document.getElementById('analysisResults');
+            
+            let html = `
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6><i class="fas fa-info-circle me-2"></i>Informações do Arquivo</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Tamanho:</strong> ${(analysis.file_info.size_mb).toFixed(2)} MB</li>
+                            <li><strong>Abas:</strong> ${analysis.file_info.sheet_count}</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6><i class="fas fa-chart-bar me-2"></i>Produtos Estimados</h6>
+                        <ul class="list-unstyled">
+            `;
+            
+            let totalProducts = 0;
+            for (const [sheetName, sheetData] of Object.entries(analysis.sheets_analysis)) {
+                if (sheetData.estimated_product_count) {
+                    html += `<li><strong>${sheetName}:</strong> ${sheetData.estimated_product_count} produtos</li>`;
+                    totalProducts += sheetData.estimated_product_count;
+                }
+            }
+            
+            html += `
+                        </ul>
+                        <div class="alert alert-success">
+                            <strong>Total Estimado:</strong> ${totalProducts} produtos
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            if (analysis.ai_insights && !analysis.ai_insights.error) {
+                html += `
+                    <div class="mt-3">
+                        <h6><i class="fas fa-brain me-2"></i>Análise da IA</h6>
+                        <div class="alert alert-info">
+                            <small>A IA identificou automaticamente a estrutura dos dados e está pronta para construir o banco de dados.</small>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            container.innerHTML = html;
+        }
+
+        async function startAutonomousBuild() {
+            if (!selectedFile) return;
+
+            // Move to building step
+            nextStep();
+
+            const formData = new FormData();
+            formData.append('file', selectedFile);
+            formData.append('supabase_url', document.getElementById('supabaseUrl').value);
+            formData.append('supabase_key', document.getElementById('supabaseKey').value);
+            formData.append('database_url', document.getElementById('databaseUrl').value);
+
+            const progressBar = document.getElementById('buildProgress');
+            const logContainer = document.getElementById('buildLog');
+            const resultsContainer = document.getElementById('buildResults');
+
+            // Clear previous logs
+            logContainer.innerHTML = '';
+            resultsContainer.innerHTML = '';
+
+            // Add initial log
+            addLogEntry('Iniciando construção autônoma do banco de dados...', 'info');
+            progressBar.style.width = '10%';
+
+            try {
+                addLogEntry('Enviando arquivo e configurações...', 'info');
+                progressBar.style.width = '25%';
+
+                const response = await fetch('/api/ai/build-database', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                progressBar.style.width = '50%';
+                addLogEntry('Processando dados...', 'info');
+
+                const result = await response.json();
+                progressBar.style.width = '100%';
+
+                if (result.success) {
+                    addLogEntry('✅ Banco de dados construído com sucesso!', 'success');
+                    displayBuildResults(result);
+                } else {
+                    addLogEntry('❌ Erro na construção: ' + (result.errors ? result.errors.join(', ') : result.error), 'error');
+                }
+            } catch (error) {
+                progressBar.style.width = '100%';
+                addLogEntry('❌ Erro na construção: ' + error.message, 'error');
+            }
+        }
+
+        function addLogEntry(message, type = 'info') {
+            const logContainer = document.getElementById('buildLog');
+            const entry = document.createElement('div');
+            entry.className = `log-entry log-${type}`;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logContainer.appendChild(entry);
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+
+        function displayBuildResults(result) {
+            const container = document.getElementById('buildResults');
+            
+            let html = `
+                <div class="alert alert-success">
+                    <h5><i class="fas fa-check-circle me-2"></i>Construção Concluída!</h5>
+                    <p class="mb-0">Seu banco de dados STIHL foi criado com sucesso no Supabase.</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Estatísticas</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Produtos:</strong> ${result.metadata.total_products || 0}</li>
+                            <li><strong>Categorias:</strong> ${result.metadata.total_categories || 0}</li>
+                            <li><strong>Operações:</strong> ${result.metadata.operations_executed || 0}</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Próximos Passos</h6>
+                        <ul class="list-unstyled">
+                            <li>✅ Tabelas criadas</li>
+                            <li>✅ Dados inseridos</li>
+                            <li>✅ Funções de IA configuradas</li>
+                            <li>✅ Segurança implementada</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-3">
+                    <button class="btn btn-primary me-2" onclick="location.reload()">
+                        <i class="fas fa-redo me-2"></i>Nova Construção
+                    </button>
+                    <button class="btn btn-outline-primary" onclick="window.open('https://supabase.com/dashboard', '_blank')">
+                        <i class="fas fa-external-link-alt me-2"></i>Abrir Supabase
+                    </button>
+                </div>
+            `;
+            
+            container.innerHTML = html;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
