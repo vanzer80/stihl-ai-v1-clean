@@ -1,0 +1,91 @@
+itens_em_negrito_representam_o_fio_de_corte_disponivel_no_codigo,codigo_de_referencia,indicacoes_de_uso,unnamed_5,ferramenta_de_corte,perfil_do_fio_indicado,diametro_mm_comprimento_total_m,unnamed_9,unnamed_10,unnamed_11,impl_km_fs_ka_fs,fs_38,fs_55_r_fs_55_fs_80_fs_85_fs_120_fs_131_fr_220,fs_161_fs_221_fs_291_fs_300_fs_351_fs_380_fs_460,fsa_45,fsa_57,fsa_65_fsa_86,fse_41,fse_60
+TrimCut C 32-2,4002-710-2198,"Para trabalhos de corte e limpeza junto a árvores, muros, calçadas, canteiros e ao redor de obstáculos. O fio de corte é reajustado manualmente.",,,,24.0,27.0,3,3.3,,–,,–,–,–,–,–,–
+,,,,,,12.0,10.0,8,6,,,,,,,,,
+TrimCut C 42-2,4003-710-2122,"Para trabalhos de corte e limpeza junto a árvores, muros, calçadas, canteiros e ao redor de obstáculos. O fio de corte é reajustado manualmente.",,,,24.0,27.0,3,3.3,–,–,–,,–,–,–,–,–
+,,,,,,12.0,10.0,8,6,,,,,,,,,
+AutoCut 2-2,4008-710-2100,"Para trabalhos de corte, limpeza e acabamento. O fio de corte é reajustado automaticamente depois de tocar a ferramenta de corte no chão.",,,,16.0,-,-,-,–,–,–,–,–,,–,–,–
+,,,,,,16.0,-,-,-,,,,,,,,,
+AutoCut C 4-2,4006-710-2121,"Para trabalhos de corte, limpeza e acabamento. O fio de corte é reajustado automaticamente depois de tocar a ferramenta de corte no chão.",,,,2.0,-,-,-,–,–,–,–,–,–,,–,–
+,,,,,,10.0,-,-,-,,,,,,,,,
+AutoCut C 6-2,4006-710-2126,"Para trabalhos de corte, limpeza e acabamentos. O fio de corte é reajustado automaticamente depois de tocar a ferramenta de corte no chão.",,,,2.0,24.0,-,-,–,,–,–,–,–,–,–,
+,,,,,,8.0,8.0,-,-,,,,,,,,,
+AutoCut C 26-2,4002-710-2169,"Para trabalhos de corte, limpeza e acabamento. O fio de corte é reajustado automaticamente depois de tocar a ferramenta de corte no chão.",,,,24.0,27.0,-,-,,–,,–,–,–,–,–,–
+,,,,,,16.0,14.0,-,-,,,,,,,,,
+AutoCut 27-2,4002-820-2302,"Para trabalhos de corte, limpeza e acabamento. O fio de corte é reajustado automaticamente depois de tocar a ferramenta de corte no chão.",,,,24.0,27.0,-,-,,-,,-,–,–,–,–,–
+,,,,,,10.0,7.0,-,-,,,,,,,,,
+AutoCut 46-2,4003-710-2115,"Para trabalhos de corte, limpeza e acabamento. O fio de corte é reajustado automaticamente depois de tocar a ferramenta de corte no chão.",,,,24.0,27.0,3,3.3,–,–,–,,–,–,–,–,–
+,,,,,,15.0,12.0,10,8,,,,,,,,,
+SuperCut 20-2,4002-710-2162,"Com dois fios,  é recomendado para corte e limpeza. O fio de nylon é mantido automaticamente no comprimento ideal para o corte.",,,,24.0,-,-,-,,–,,–,–,–,–,–,–
+,,,,,,12.0,-,-,-,,,,,,,,,
+PolyCut 2-2,4008-710-2102,"Versátil ferramenta de corte, permite utilizar lâminas plásticas e fios de nylon. Indicado para corte preciso e rente ao solo em áreas verdes com grama baixa.",,,,14.0,16.0,,,–,–,–,–,,–,–,–,–
+,,,,,,5.0,5.0,,,,,,,,,,,
+PolyCut 27-3,4002-710-2176,"Versátil ferramenta de corte, permite utilizar lâminas plásticas e fios de nylon. Indicado para corte preciso e rente ao solo em áreas verdes com grama baixa.",,,,24.0,27.0,,,–,–,,–,–,–,–,–,–
+,,,,,,5.0,5.0,0.11,,,,,,,,,,
+PolyCut 47-3,4003-716-2117,"Versátil ferramenta de corte, permite utilizar lâminas plásticas e fios de nylon. Indicado para corte preciso e rente ao solo em áreas verdes com grama baixa.",,,,24.0,27.0,,,–,–,–,,–,–,–,–,–
+,,,,,,5.0,5.0,0.11,,,,,,,,,,
+Durocut 20-2,4002-710-2182,Para corte ou desbaste mesmo de vegetação densa e entrelaçada. Fácil de abastecer os fios. Pode usar 2 ou 4 fios ao mesmo tempo.,,,,2.0,24.0,2.7,,–,–,,,–,–,–,–,–
+,,,,,,-,-,-,-,,,,,,,,,
+Durocut 40-4,4005-710-2114,Para corte ou desbaste mesmo de vegetação densa e entrelaçada. Fácil de abastecer os fios. Pode usar 2 ou 4 fios ao mesmo tempo.,,,,27.0,3.0,3.3,,–,–,–,,–,–,–,–,–
+,,,,,,-,-,-,,,,,,,,,,
+Carretel,6235-710-4305,Aplicações de corte e acabamento em grama baixa e fina.,,,,14.0,-,-,-,–,–,–,–,–,–,–,,–
+,,,,,,16.0,-,-,-,,,,,,,,,
+"Lâmina 
+200x2,4 ",4133-713-4101,Para o cortes de acabamento em canteiros plantados e em calçadas,,,●,–,–,–,–,–,–,–,–,,,,,
+"Lâmina
+ 230-2",4001-713-3805,A alta rotação de corte permite roçar vegetações com excelente acabamento de corte ,,,–,●,–,–,●,●,–,–,●,,,,,
+"Lâmina 
+260-2",4001-713-3812,"Com 260 mm de comprimento e 8 arestas de corte é indicada para tarefas mais exigentes da jardinagem
+",,,–,●,–,–,–,●,–,–,●,,,,,
+"Lâmina
+230-4",4001-713-3801,"Com ampla área de corte, é recomendada para corte de ervas daninhas que requerem acabameto rente ao solo  ",,,–,●,–,–,●,●,–,–,●,,,,,
+"Lâmina
+230-8",4001-713-3803,"Robusto e com oito pontas,  proporciona excelente produtividade em vegetação seca e adensada",,,–,●,–,–,●,●,–,–,●,,,,,
+"Lâmina 305-2
+ Especial",4000-713-4103,"Fabricada com aço especial blindado, é recomendada para trabalhos exigentes em mato alto",,,–,–,–,–,–,–,●,●,–,,,,,
+"Lâmina de
+ 3 facas,
+ Ø 250 mm",4112-713-4100,"Em aço especial de alta resistência, é recomendada para trabalhos exigentes em mato alto e lenhoso com até 2 cm de diâmetro",,,–,●,–,–,–,●,–,–,●,,,,,
+"Lâmina de 
+3 facas,
+ Ø 300 mm",4119-713-4100,"Em aço especial de alta resistência, é recomendada para trabalhos exigentes em mato alto e lenhoso com até 2 cm de diâmetro",,,–,–,–,–,–,–,●,●,–,,,,,
+"Lâmina 
+trituradora
+ 270-2",4000-713-3903,"Recomendada para cortar e triturar simultaneamente vegetações altas, densas e entrelaçadas e arbustos",,,–,–,–,–,–,–,●,●,–,,,,,
+"Serra circular
+200-44,
+standard",4000-713-4200,"Com dentes pontiagudos, é indicada para cortar  troncos com até 7 cm de diâmetro. Excelente performance em vegetações densas e entrelaçadas",,,–,–,–,–,–,–,●,●,–,,,,,
+"Serra circular
+200-80,
+standard",4112-713-4201,"Com dentes pontiagudos, é indicada para cortar troncos com até 4 cm de diâmetro. Excelente performance em vegetações densas e entrelaçadas",,,–,–,–,–,–,●,–,–,–,,,,,
+"Serra circular
+200-22,
+especial",4112-713-4203,"Com afiação e ângulo de corte especiais, têm alta resistência ao desgaste. Recomendado para cortes de desbrota com diâmetros de até 4 cm ",,,–,–,–,–,–,●,–,–,–,,,,,
+"Serra circular
+200-22,
+especial",4119-713-4200,"Com afiação e ângulo de corte especiais, têm alta resistência ao desgaste. Recomendado para cortes de desbrota com diâmetros de até 7 cm ",,,–,–,–,–,–,–,●,●,–,,,,,
+"Serra circular
+225-24,
+especial",4110-713-4204,"Com afiação e ângulo de corte especiais, têm alta resistência ao desgaste. Recomendado para cortes de desbrota com diâmetros de até 7 cm ",,,–,–,–,–,–,–,●,●,–,,,,,
+,"1,4 mm",,–,–,,,,,,,,,,,,,,
+,"1,6 mm",–,,–,,,,,,,,,,,,,,
+,"2,0 mm",,,–,,,4008-710-2102,,PolyCut 2-2,230 / 250,4008-007-1000,,,,,,,
+,"2,7 mm",,,–,,,,,PolyCut 27-3,360 / 380,,,,,,,,
+,"3,3 mm",–,–,,,,,,,,,,,,,,,
+,,0000-930-2284,14.0,16,,,,,,,,,,,,,,
+,,0000-930-3614,2.0,15.3,,,,,,,,,,,,,,
+,,0000-930-3615,2.0,123,,,,,,,,,,,,,,
+,,0000-930-3616,24.0,15.3,,,,,,,,,,,,,,
+,,0000-930-3617,24.0,87,,,,,,,,,,,,,,
+,,0000-930-3618,24.0,261,,,,,,,,,,,,,,
+,,0000-930-3619,24.0,688,,,,,,,,,,,,,,
+,,0000-930-3620,27.0,10.9,,,,,,,,,,,,,,
+,,0000-930-3621,27.0,72,,,,,,,,,,,,,,
+,,0000-930-3622,27.0,215,,,,,,,,,,,,,,
+,,0000-930-3623,27.0,512,,,,,,,,,,,,,,
+,,0000-930-3624,3.0,300,,,,,,,,,,,,,,
+,,0000-930-2415,16.0,20,,,,,,,,,,,,,,
+,,0000-930-2515,2.0,15.3,,,,,,,,,,,,,,
+,,0000-930-2419,24.0,14.6,,,,,,,,,,,,,,
+,,0000-930-2422,27.0,9.8,,,,,,,,,,,,,,
+,,0000-930-3800,3.0,312,,,,,,,,,,,,,,
+,,0000-930-3801,33.0,228,,,,,,,,,,,,,,

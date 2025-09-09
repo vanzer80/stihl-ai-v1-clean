@@ -1,0 +1,166 @@
+unnamed_1,unnamed_2,unnamed_3,codigo_material,preco_real,descricao,qtde_min,bateria_recomendada,kit,tensao_carregador,tensao_nominal_bateria_v,sabres_cm,corrente,velocidade_da_corrente_m_s,peso_kg,s,t,ipi,ncm_classif_fiscal,cod_barras
+,,,MA04-011-5803,1899.0,"MSA 60.0 C-B 1/4""P Motosserra à bateria",1.0,AK 20,Não acompanha bateria ou carregador,-,36,30,"PM3 - 1/4"" - 1,1 mm",14,25.0,1.0,10.0,52.0,84672200.0,886661682706.0
+,,,MA04-011-5812,2909.0,"MSA 60.0 C-B 1/4""P SET Motosserra à  bateria",1.0,,"Bateria AK 20
+Carregador AL 101 - 220V",220V,,,,,37.0,1.0,10.0,52.0,84672200.0,886661682881.0
+,,,MA04-011-5813,2909.0,"MSA 60.0 C-B 1/4""P SET Motosserra à  bateria",1.0,,"Bateria AK 20
+Carregador AL 101 - 127V",127V,,,,,37.0,1.0,10.0,52.0,84672200.0,886661682904.0
+,,,MA04-011-5819,2099.0,"MSA 70.0 C-B 1/4""P Motosserra à bateria",1.0,AK 30,Não acompanha bateria ou carregador,-,36,30,"PM3 - 1/4"" - 1,1 mm",14,25.0,1.0,10.0,52.0,84672200.0,886661683376.0
+,,,MA04-011-5828,3409.0,"MSA 70.0 C-B 1/4""P SET Motosserra à  bateria",1.0,,"Bateria AK 30
+Carregador AL 101 - 220V",220V,,,,,37.0,1.0,10.0,52.0,84672200.0,886661683581.0
+,,,MA04-011-5829,3409.0,"MSA 70.0 C-B 1/4""P SET Motosserra à  bateria",1.0,,"Bateria AK 30
+Carregador AL 101 - 127V",127V,,,,,37.0,1.0,10.0,52.0,84672200.0,886661683598.0
+,,,1252-200-0054,3199.0,"MSA 161 T Motosserra à bateria,30cm/12""",1.0,AP 200 S,Não acompanha bateria ou carregador,-,36,30,"PM3 - 1/4"" - 1,1 mm",16,25.0,1.0,10.0,52.0,84672200.0,886661965120.0
+,,,MA03-200-0001,2199.0,MSA 160.0 C-B Motosserra à bateria,1.0,AP 300S,Não acompanha bateria ou carregador,-,36,30,"PM3 - 1/4"" - 1,1 mm",16,31.0,1.0,10.0,52.0,84672200.0,886661874323.0
+,,,MA03-200-0024,2499.0,MSA 200.0 C-B Motosserra à bateria,1.0,AP 300S,Não acompanha bateria ou carregador,,36,35,"PM3 - 1/4"" - 1,1 mm",16,31.0,1.0,10.0,52.0,84672200.0,886661875184.0
+,,,MA03-200-0026,2899.0,MSA 220.0 C-B Motosserra à bateria,1.0,AP 300S,Não acompanha bateria ou carregador,,36,40,"PS3 - 3/8"" - 1,1 mm",23,31.0,1.0,10.0,52.0,84672200.0,795711401566.0
+,,,MA02-200-0047,5999.0,MSA 300.0 C-O Motosserra à bateria,1.0,AP 500 S,Não acompanha bateria ou carregador,-,36,45,"RS Pro - .325"" - 1,3 mm",20 / 24 / 30,45.0,8.0,10.0,52.0,84672200.0,886661507306.0
+,,,MA02-200-0049,6009.0,MSA 300.0 C-O Motosserra à bateria,1.0,,,-,,50,"RS Pro - .325"" - 1,3 mm",,,5.0,10.0,52.0,84672200.0,886661508150.0
+,,,GA01-011-6913,1159.0,"GTA 26 SET Podador de galhos a bateria,",1.0,AS 2,"Máquina com sabre e corrente,  carregador,  bateria e bolsa",127 V,10.8,10,"PM3 - 1/4"" - 1,1 mm",80 cortes,28.0,1.0,10.0,52.0,84672200.0,886661937486.0
+,,,GA01-011-6923,1159.0,"GTA 26 SET Podador de galhos a bateria,",1.0,,,220 V,,,,,,1.0,10.0,52.0,84672200.0,886661960644.0
+,,,GA01-011-6903,859.0,GTA 26 Podador de galhos a bateria,1.0,AS 2,Não acompanha bateria e carregador,-,10.8,10,"PM3 - 1/4"" - 1,1 mm",80 cortes,22.0,1.0,10.0,52.0,84672200.0,886661623297.0
+,,,GA01-490-1700,22364.0,Estojo,1.0,-,GTA26,"Possui tiras para prender e evitar quedas do produto, além de deixar as mãos do operador livres para realização de outras atividades enquanto estiver manuseando o produto.",,,,,45.0,1.0,0.0,65.0,42029200.0,886661475568.0
+,,,GA01-820-5000,56594.0,Extensão GTA 26,1.0,Alcance de 150 cm para ser utilizada com o GTA 26,,,,,,,13.0,1.0,10.0,52.0,84679100.0,795711864491.0
+,,,GA04-011-6903,1999.0,GTA 40.0 Cortador de Galhos a bateria,1.0,-,-,-,21.6,15,"PM3 - 1/4"" - 1,1 mm",Até 190,28.0,1.0,10.0,52.0,84672999.0,795711948818.0
+,,,GA04-011-6913,3499.0,GTA 40.0 SET 127V Cortador de galhos a bateria,1.0,,,127 V,,,,,,1.0,10.0,52.0,84672999.0,795711948917.0
+,,,GA04-011-6923,3499.0,GTA 40.0 SET 220V Cortador de galhos a bateria,1.0,,,220 V,,,,,22.0,1.0,10.0,52.0,84672999.0,795711948962.0
+,,,FA10-011-5705,869.0,FSA 30.0 Roçadeira a bateria,1.0,-,Não acompanha bateria e carregador,10.8,Polycut 3-2,"Diâmetro de corte da lâmina
+plástica [mm] 230
+Diâmetro de corte com fio
+de nylon [mm] 250
+Diâmetro do fio de corte [mm] 1,6",,até 19 [Polycut 3-2],21.0,1.0,10.0,52.0,84672999.0,886661390816.0
+,,,FA10-011-5717,1209.0,FSA 30.0 SET Roçadeira a bateria,1.0,127V,"Bateria AS 2
+Carregador AL 1 -127v ",,Polycut 3-2,,,,24.0,1.0,10.0,52.0,84672999.0,886661392780.0
+,,,FA10-011-5718,1209.0,FSA 30.0 SET Roçadeira a bateria,1.0,220V,"Bateria AS 2
+Carregador AL 1 -220v ",,Polycut 3-2,,,,224.0,1.0,10.0,52.0,84672999.0,886661393145.0
+,,,4512-011-5707,649.0,FSA 45 Roçadeira a bateria,1.0,Bivolt,Bateria integrada e carregador,18,PolyCut 2-2 ,"Lâminas plásticas:  230
+Fio de nylon : 250",,"Lâminas plásticas:  20
+Fio de nylon : 12",23.0,1.0,10.0,52.0,84672999.0,886661398454.0
+,,,4522-011-5747,1399.0,"FSA 57 SET Roçadeira a bateria, AutoCut",1.0,AK 10,"Bateria AK 10
+Carregador AL 101 -127v",127V,36,AutoCut C 3-2,,280,35.0,1.0,10.0,52.0,84672999.0,886661883646.0
+,,,4522-011-5746,1399.0,"FSA 57 SET Roçadeira a bateria, AutoCut",1.0,,"Bateria AK 10
+Carregador AL 101 - 220v",220V,,,,,,1.0,10.0,52.0,84672999.0,886661883639.0
+,,,4522-011-5730,859.0,"FSA 57 Roçadeira a bateria, AutoCut C3-2",1.0,,Não acompanha bateria ou carregador,-,,,,,,1.0,10.0,52.0,84672999.0,886661876853.0
+,,,FA05-011-5700,1999.0,FSA 86 R Roçadeira a bateria,1.0,AP 300S,Não acompanha bateria ou carregador,-,36,AutoCut C 6-2,,350,45.0,1.0,10.0,52.0,84672999.0,886661336388.0
+,,,FA01-200-0000,3949.0,"FSA 135 Roçadeira a bateria, AutoCut C 2",1.0,AP 300 S,Não acompanha bateria ou carregador,-,36,AutoCut C 26-2,,,49.0,1.0,10.0,52.0,84672999.0,886661413904.0
+,,,FA01-200-0001,3799.0,"FSA 135 Roçadeira a bateria,GSB 260-2",1.0,,,-,,Lâmina 260-2,,,49.0,1.0,10.0,52.0,84672999.0,886661413911.0
+,,,FA02-011-6800,2699.0,KMA 135 R Motor combinado a bateria,1.0,AP 300 S,Não acompanha bateria ou carregador,-,36,Implementos KM,,,34.0,1.0,0.0,0.0,85013210.0,886661869213.0
+,,,,1.0,4601-740-5000,1719.0,1,BF-KM Cultivador do solo,,,,KM55/85 / KMA135R,,4142.0,1.0,10.0,52.0,82079000.0,795711319076.0
+,,,,2.0,4243-740-5003,1729.0,1,HL-KM 145° Podador especial,,,,KM55/85 / KMA135R,,2742.0,6.0,10.0,52.0,84679900.0,886661157259.0
+,,,,3.0,4606-740-5000,739.0,1,BG-KM Soprador axial,,,,KM55/85 / KMA135R,,1736.0,1.0,10.0,52.0,82079000.0,795711349851.0
+,,,,4.0,4182-200-0212,1269.0,1,"Implem. KM - HT Motopoda,30cm/12"",71PM3",,,,HT-KM55/85R / KMA135R,,2384.0,1.0,10.0,52.0,84679100.0,886661545568.0
+,,,,5.0,4182-200-0208,1249.0,1,"Implem. KM - HT Motopoda,30cm/12"",61PMM3",,,,HT-KM55/85R /  KMA135R,,2384.0,0.0,10.0,52.0,82079000.0,886661538195.0
+,,,,6.0,4180-740-5002,759.0,1,FCB-KM Aparador de cantos,,,,FCB-KM55/85 / KMA135R,,286.0,1.0,10.0,52.0,82079000.0,886661111749.0
+,,,,7.0,4180-710-7141,489.0,1,FS-KM Roçadeira,"Não acompanha Jogo de proteção, Kit de peças para fixação da lâmina e arruela 4137-710-3800",,,FS-KM55/85 / KMA135R,,1045.0,6.0,10.0,52.0,84679900.0,886661180844.0
+,,,,,4140-710-7131,43404.0,1,Tubo do eixo 1 m,Prolongador da haste,,,HT-KM85R / KMA135R,,,1.0,10.0,0.0,84831090.0,795711169565.0
+,,,HA03-011-3509,849.0,HSA 26 SET 127V Podador de arbustos a ba,1.0,AS 2,"Máquina com lâmina para arbustos, lâmina para grama,  carregador,  bateria e bolsa",127 V,10.8,80 / 120,200,120,8.0,1.0,10.0,52.0,84672999.0,886661931859.0
+,,,HA03-011-3518,849.0,HSA 26 SET 220V Podador de arbustos a ba,1.0,,,220 V,,,,,,1.0,10.0,52.0,84672999.0,886661026333.0
+,,,HA03-011-3503,509.0,HSA 26 Podador de arbustos a bateria,1.0,AS 2,Não acompanha bateria e carregador,-,10.8,80 / 120,200,120,8.0,1.0,10.0,52.0,84672999.0,886661869947.0
+,,,HA03-710-7100,34166.0,Haste telescópica,1.0,-,GTA26,A haste telescópica é um excelente acessório para cortar as bordas do gramado de maneira prática e confortável,,,,,45.0,1.0,10.0,52.0,84679900.0,886661937608.0
+,,,HA08-011-3504,899.0,"HSA 30.0 Podador a bateria, 450mm/18""",1.0,AS 2,Não acompanha bateria ou carregador,-,10.8,45,22,,2.0,1.0,10.0,52.0,84672999.0,886661684243.0
+,,,HA08-011-3511,1189.0,"HSA 30.0 SET Podador a bateria, 220V,",1.0,,"Bateria AS 2
+Carregador AL 1 - 220V",220V,,,,,,1.0,10.0,52.0,84672999.0,886661684311.0
+,,,HA08-011-3512,1189.0,"HSA 30.0 SET Podador a bateria, 127V,",1.0,,"Bateria AS 2
+Carregador AL 1 - 127V",127V,,,,,,1.0,10.0,52.0,84672999.0,886661684328.0
+,,,HA08-011-3524,1089.0,"HSA 40.0 Podador a bateria, 500mm/20""",1.0,AS 2,Não acompanha bateria ou carregador,-,10.8,50,24,,21.0,1.0,10.0,52.0,84672999.0,886661869862.0
+,,,HA08-011-3531,1529.0,"HSA 40.0 SET Podador a bateria, 220V,",1.0,,"2 Unidades Bateria AS 2
+Carregador AL 1 - 220V",220V,,,,,,1.0,10.0,52.0,84672999.0,886661870042.0
+,,,HA08-011-3532,1529.0,"HSA 40.0 SET Podador a bateria, 127V,",1.0,,"2 Unidades Bateria AS 2
+Carregador AL 1 - 127V",127V,,,,,,1.0,10.0,52.0,84672999.0,886661870059.0
+,,,4511-011-3527,649.0,"HSA 45 Podador a bateria, 500mm/20""",2.0,Integrada,Carregador,Bivolt,18,50,2500,40,23.0,1.0,10.0,52.0,84672999.0,795711895587.0
+,,,4521-011-3577,2039.0,"HSA 50.1 SET Podador a bateria, 127V",1.0,AK 10,"Bateria AK 10
+Carregador AL 101 - 127V",127V,36,50,30,,29.0,1.0,10.0,52.0,84672999.0,795711892692.0
+,,,4521-011-3576,2039.0,"HSA 50.1 SET Podador a bateria, 220V,",1.0,,"Bateria AK 10
+Carregador AL 101 - 220V",220V,,,,,,1.0,10.0,52.0,84672999.0,795711892685.0
+,,,4521-011-3563,1339.0,"HSA 50.1 Podador a bateria, 500mm/20""",1.0,,Não acompanha bateria ou carregador,-,,,,,,1.0,10.0,52.0,84672999.0,795711892579.0
+,,,HA07-011-3530,1899.0,"HSA 100.1 Podador a bateria, 600mm/24""",1.0,AP200,Não acompanha bateria ou carregador,-,36,600,34,,36.0,1.0,10.0,52.0,84672999.0,795711859367.0
+,,,HA01-011-2913,156899.0,HLA 56 Podador de altura a bateria,1.0,AK 10,Não acompanha bateria ou carregador,-,36,"135º
+ (-45º até +90º)",2.1,450,38.0,1.0,10.0,52.0,84672999.0,886661771080.0
+,,,HA01-820-5000,27396.0,"Extensão 0,5 m",1.0,"A extensão amplia o raio de alcance do usuário, permitindo atingir alturas maiores. ",,,,,,,474.0,1.0,10.0,52.0,84679900.0,886661858514.0
+,,,4859-011-2914,2599.0,HLA 66 Podador de altura a bateria,1.0,AP 200 S,Não acompanha bateria ou carregador,-,36,"115º
+(-45º até +70º)",2.05,500,38.0,1.0,10.0,52.0,84672999.0,886661900961.0
+,,,SA03-011-7304,829.0,SEA 20.0 Aspirador portátil a bateria,1.0,AS 2,Não acompanha bateria ou carregador,-,10.8,0.75,80 / 8,14,11.0,1.0,10.0,65.0,85081100.0,886661968015.0
+,,,SA03-011-7317,1139.0,SEA 20.0 SET Aspirador portátil 127V,1.0,,"Bateria AS 2
+Carregador AL 1 - 127V",127 V,,,,,,1.0,10.0,65.0,85081100.0,886661968107.0
+,,,SA03-011-7318,1139.0,SEA 20.0 SET Aspirador portátil 220V,1.0,,"Bateria AS 2
+Carregador AL 1 - 220V",220 v,,,,,,1.0,10.0,65.0,85081100.0,886661968121.0
+,,,SA04-011-7305,1899.0,SEA 60.0 L Aspirador a bateria,1.0,450,Não acompanha bateria ou carregador,"Lavável
+Filtro Papel
+Filtro Espuma",12,9,AK 20,190,75.0,1.0,10.0,65.0,85081100.0,886661036486.0
+,,,SA04-011-7315,2299.0,SEA 100.0 L Aspirador a bateria,1.0,500,Não acompanha bateria ou carregador,"Lavável
+Filtro Papel
+Filtro Espuma",12,9,AP 200 S,210,65.0,1.0,10.0,65.0,85081100.0,886661247493.0
+,,,SA03-007-1000 ,12047.0,Jogo Mini bicos,,,,,,,,,1.0,1.0,0.0,65.0,85087000.0,886661747474.0
+,,,SA02-011-7100,1649.0,SHA 56 Trituradora de aspiração a bateria,1.0,AK  20,Não acompanha bateria ou carregador,510,40,"3,2 (soprador) 4,2 (aspirador)",,25,,1.0,0.0,65.0,85081900.0,886661624492.0
+,,,BA08-011-5900,699.0,BGA 30.0 Soprador a bateria,1.0,AS 2,Não acompanha bateria ou carregador,-,10.8,430,43,8-25,15.0,1.0,10.0,0.0,84145990.0,886661879212.0
+,,,BA08-011-5919,1099.0,"BGA 30.0 SET Soprador a bateria, 127V",1.0,,"2 Baterias AS 2
+Carregador AL 1 - 127V",127V,,,,,,1.0,10.0,0.0,84145990.0,886661882014.0
+,,,BA08-011-5920,1099.0,"BGA 30.0 SET Soprador a bateria, 220V",1.0,," 2 Baterias AS 2
+Carregador AL 1 - 220V",220V,,,,,,1.0,10.0,0.0,84145990.0,886661255412.0
+,,,4513-011-5907,649.0,BGA 45 Soprador a bateria,1.0,Integrada,Carregador,bivolt,18,38,400,10,2.0,6.0,10.0,0.0,84145990.0,886661398553.0
+,,,BA05-011-5900,899.0,BGA 50.0 Soprador a bateria,1.0,AK 20,Não acompanha bateria ou carregador,-,36,770,46,20,22.0,1.0,10.0,0.0,84145990.0,886661311132.0
+,,,BA05-011-5915,1899.0,"BGA 50.0 SET Soprador a bateria, 220V",1.0,,"Bateria AK 20
+Carregador AL 101 - 220V",220V,,,,,,1.0,10.0,0.0,84145990.0,886661422296.0
+,,,BA05-011-5916,1899.0,"BGA 50.0 SET Soprador a bateria, 127V",1.0,,"Bateria AK 20
+Carregador AL 101 - 127V",110V,,,,,,1.0,10.0,0.0,84145990.0,886661422302.0
+,,,BA02-011-5904,1149.0,BGA 86 Soprador a bateria,1.0,AP 300S,Não acompanha bateria ou carregador,-,36,58,780,21,46.0,6.0,10.0,0.0,84145990.0,886661867387.0
+,,,BA03-011-5910,4299.0,BGA 300.1 Soprador a bateria,1.0,AP,não acompanha as baterias AP.,-,-,86,970,58 usando duas baterias AP 500,74.0,1.0,10.0,0.0,84145990.0,886661113873.0
+,,,6909-400-4300,2289.0,Adaptador para compartimento duplo da ba,1.0,,não acompanha as baterias AP.,-,-,-,-,-,,1.0,10.0,325.0,84149020.0,795711995195.0
+,,,0000-790-7700,3589.0,Cinto peitoral,,,,,,,,,1.0,1.0,0.0,0.0,63079090.0,795711424671.0
+,,,4282-790-1700,23388.0,Tubo do punho,,,,,,,,,1.0,1.0,10.0,325.0,84249090.0,795711372255.0
+,,,4283-710-9100,20694.0,Cinturão,,,,,,,,,1.0,1.0,0.0,0.0,63079090.0,886661286317.0
+,,,4244-708-6302,571.0,Bico redondo curvado,,,,,,,,,1.0,1.0,10.0,325.0,84149020.0,886661173822.0
+,,,4282-708-6304,7996.0,Bico chato curvado,,,,,,,,,1.0,1.0,10.0,325.0,84149020.0,886661035991.0
+,,,6311-011-1417,1569.0,RMA 235.1 (RoW) Cortador de grama a bateria,1.0,AK 20,Não acompanha bateria ou carregador,-,36,25 - 65,33,30,14.0,1.0,0.0,325.0,84331100.0,886661760770.0
+,,,6368-011-1402,2959.0,RMA 460 Cortador de grama a bateria,1.0,AK 30,Não acompanha bateria ou carregador,-,36,46,35-90,60,25.0,1.0,0.0,325.0,84331100.0,886661433896.0
+,,,6368-011-1412,3669.0,RMA 460.0 V Cortador de grama a bateria,1.0,AK 30,Não acompanha bateria ou carregador,-,36,46,25-100,60,28.0,1.0,0.0,325.0,84331100.0,886661867929.0
+,,,WA32-011-1410,3159.0,RMA 353.0 Cortador de grama a bateria,1.0,AP 300 S,Não acompanha bateria ou carregador,-,36,51,25-100,60,27.0,1.0,0.0,325.0,84331100.0,886661737352.0
+,,,WA32-011-1430,4189.0,RMA 353.0 V Cortador de grama a bateria,1.0,AP 300 S,Não acompanha bateria ou carregador,-,36,51,25-100,60,30.0,1.0,0.0,325.0,84331100.0,886661738922.0
+,,,4864-011-6620,4499.0,TSA 230.1 Cortador a disco a bateria,1.0,AP 300S,Não acompanha bateria ou carregador,EC,2.1,1.6,3.9,20,39.0,1.0,10.0,52.0,84672999.0,886661733552.0
+,,,LA02-011-6403,2199.0,"HTA 50.0 1/4""P Moto-poda a bateria",1.0,AK 20,Não acompanha bateria ou carregador,-,36,280,25,"PM3 -1/4""",36.0,1.0,10.0,52.0,84672200.0,886661624430.0
+,,,LA02-820-5000,27396.0,"Extensão 0,5 m",1.0,HTA50,,,,,,,,1.0,10.0,52.0,84679100.0,886661879632.0
+,,,LA03-200-0010,3699.0,"HTA 86 Moto-poda a bateria,30cm/12""",1.0,AP 300S,Não acompanha bateria ou carregador,-,36,270 - 390,30,"1,1 PM3 - 1/4""",45.0,1.0,10.0,52.0,84672200.0,886661618941.0
+,,,LA01-200-0004,4589.0,"HTA 135 Moto-poda a bateria,30cm/12""",1.0,AP 300S,Não acompanha bateria ou carregador,-,36,285 - 405,30,"1,1 PMM3 - 3/8""",68.0,1.0,10.0,52.0,84672200.0,886661563975.0
+,,,4855-011-0700,3879.0,SPA 65 Colhedor especial a bateria,1.0,AP 300S,Não acompanha bateria ou carregador,-,36,2256,Implemento SP10,,75.0,1.0,10.0,52.0,84672999.0,795711912307.0
+,,,RA01-011-7605,1899.0,REA 60.0 PLUS Lavadora de alta pressão a bateria,1.0,270,Não acompanha bateria ou carregador,130,100,AK 30 / 30S,EC,25,,1.0,10.0,0.0,84243010.0,795711369415.0
+,,,RA01-011-7615,2399.0,REA 100.0 PLUS Lavadora de alta pressão,1.0,300,Não acompanha bateria ou carregador,150,125,AP 300 S,EC,45,,1.0,10.0,0.0,84243010.0,795711369477.0
+,,,RA02-011-7605,1249.0,RCA 20.0 Lavadora de pressão a bateria,1.0,230 (sem bico de pressão),-,22,24,AS 2,DC,-,,1.0,10.0,0.0,84243010.0,886661045754.0
+,,,RA02-011-7617,1699.0,RCA 20.0 SET Lavadora de pressão a bateria,1.0,,110 V,,,,,15-30,,1.0,10.0,0.0,84243010.0,886661045877.0
+,,,RA02-011-7618,1699.0,RCA 20.0 SET Lavadora de pressão a bateria,1.0,,220 V ,,,,,,,1.0,10.0,0.0,84243010.0,886661045884.0
+,,,RA02-500-5900,31904.0,Escova rotativa,1.0,RCA 2.0,,,,,,,,1.0,10.0,325.0,84249090.0,886661427147.0
+,,,VA05-011-6200,1619.0,ASA 20.0 Tesoura de poda a bateria,1.0,AS,Não acompanha bateria ou carregador,"0,76 / 0,98",25,DC,10.8,240,,1.0,0.0,52.0,84672910.0,886661292127.0
+,,,GA08-011-8000,329.0,PS 1.0 abastecimento de energia portátil,1.0,10.8,Não acompanha bateria ou carregador,2.5,,"0,15/0,35",Corrênte máxima [A] 3 Potência máxima [W] 30,Corrênte máxima [A] 3 Potência máxima [W] 22,AS,1.0,10.0,5.0,85044010.0,886661806836.0
+,,,4850-602-0900,262.0,Tampa do compartimento da bateria AP,1.0,Todas as máquinas da linha a bateria Lithium Ion PRO,,,,,,,,1.0,0.0,5.0,39235000.0,795711843373.0
+,,,4520-602-0900,3044.0,Tampa do compartimento da bateria AK,1.0,Todas as máquinas da linha a bateria Lithium Ion COMPACT,,,,,,,,1.0,0.0,5.0,39235000.0,886661552771.0
+,,,EA02-400-6500,189.0,AS 2 Bateria,1.0,-,,,,,,,3.0,1.0,0.0,1125.0,85076000.0,886661915415.0
+,,,EA03-430-2509,189.0,"AL 1, 100 - 127 V Carregador",1.0,110 V,,,,,,,7.0,1.0,10.0,5.0,85044010.0,886661933914.0
+,,,EA03-430-2508,189.0,"AL 1, 220 - 240 V Carregador",1.0,220 V,,,,,,,7.0,1.0,10.0,5.0,85044010.0,886661870417.0
+,,,EA03-430-5708,449.0,"AL 5, 220 V Carregador rápido de bateria",1.0,220 V,,100% da recarga da bateria AS 2 em 50 minutos,,,,,624.0,1.0,10.0,5.0,85044010.0,795711882471.0
+,,,EA03-430-5709,449.0,"AL 5, 127 V Carregador rápido de bateria",1.0,110 V,,,,,,,63.0,1.0,10.0,5.0,85044010.0,796000000000.0
+,,,EA11-430-5708,1229.0,"AL 5-2, 220 V Carregador rápido de bateria",1.0,220 V,,,,,,,984.0,1.0,10.0,5.0,85044010.0,795711882976.0
+,,,EA11-430-5709,1229.0,"AL 5-2, 127 V Carregador rápido de bateria",1.0,110 V,,,,,,,984.0,1.0,10.0,5.0,85044010.0,795711882990.0
+,,,4520-400-6530,519.0,AK 10 Bateria,1.0,1.6,,54,Linha a bateria AK SYSTEM,,,,,1.0,0.0,1125.0,85076000.0,886661575527.0
+,,,4520-400-6535,799.0,AK 20 Bateria,1.0,4,,144,,,,,,1.0,0.0,1125.0,85076000.0,886661575565.0
+,,,4520-400-6545,1189.0,AK 30.0 S Bateria,1.0,5,,180,,,,,,1.0,0.0,1125.0,85076000.0,886661575640.0
+,,,4850-430-2529,279.0,"AL 101, 127 V Carregador",1.0,127V,,Pode ser utilizado com as bateria da linha AK e AP SYSTEM,,,,,,1.0,10.0,5.0,85044010.0,886661257805.0
+,,,4850-430-2528,279.0,"AL 101, 220 V Carregador",1.0,220V,,,,,,,,1.0,10.0,5.0,85044010.0,886661257782.0
+,,,4850-400-6568,2419.0,AP 200.0 S Bateria,1.0,5.2,,187,Linha a bateria AP SYSTEM,,,,,1.0,0.0,1125.0,85076000.0,886661561254.0
+,,,4850-400-6578,2729.0,AP 300.0 S Bateria,1.0,7.8,,281,,,,,,1.0,0.0,1125.0,85076000.0,886661025794.0
+,,,EA01-400-6503,4429.0,AP 500 S Bateria,1.0,9.4,,337,,,,,,1.0,0.0,1125.0,85076000.0,886661870035.0
+,,,4850-440-5101,115919.0,Bolsa de Cintura AP com cabo elétrico,1.0,Acessórios para bateria AP,,,,,,,,1.0,10.0,5.0,85444200.0,886661512232.0
+,,,4850-491-0101,1989.0,Bolsa bateria AP,1.0,,,,,,,,,1.0,0.0,65.0,42029200.0,795711854119.0
+,,,4850-440-0505,41721.0,Adaptador AP,1.0,,,,,,,,,1.0,0.0,975.0,85366990.0,886661570508.0
+,,,4850-490-0500,3674.0,Cinto para baterias com cinto de suporte,1.0,,,,,,,,,1.0,0.0,0.0,63079090.0,886661635689.0
+,,,4850-490-0400,65436.0,Sistema de suporte,1.0,,,,,,,,,1.0,0.0,0.0,63079090.0,886661405282.0
+,,,EA09-430-5509,669.0,"AL 301, 127 V Carregador rápido de bateria",1.0,127V,,Pode ser utilizado com as bateria da linha AK e AP SYSTEM,,,,,,1.0,10.0,5.0,85044010.0,886661614448.0
+,,,EA09-430-5508,669.0,"AL 301, 220 V Carregador rápido de bateria",1.0,220V,,,,,,,,1.0,10.0,5.0,85044010.0,886661614363.0
+,,,4850-430-5709,1249.0,"AL 500, 127 V Carregador rápido de bateria",1.0,127V,,Toda linha de produtos a bateria,,,,,18.0,1.0,10.0,5.0,85044010.0,886661478200.0
+,,,EA09-430-5708,1249.0,"AL 501, 220 V Carregador rápido de bateria",1.0,220V,,Toda linha de produtos a bateria,,,,,18.0,1.0,10.0,5.0,85044010.0,795711997991.0
+,,,4511-400-5607,12008.0,Cabo de carga LK 45 BR,1.0,Bivolt,,HSA45/FSA45/BGA45,,"FSA 45 - 145 / 210
+HSA 45 - 145 / 210
+BGA 45 - 210 / 300",,,,1.0,10.0,5.0,85044010.0,886661456932.0
+,,,4515-400-6500,24449.0,Bateria HSA 25,1.0,-,,Compatível apenas com HSA 25,,,180,,,1.0,0.0,1125.0,85076000.0,886661183852.0
+,,,4515-430-2508,23546.0,Carregador HSA 25,1.0,bivolt,,,,,,,,1.0,10.0,5.0,85044010.0,886661366965.0
+,,,,,,,,,,,1,HA03-011-3509,,849.0,,,,,
+,,,,,,,,,,,1,EA02-400-6500,,189.0,,,,,
+,,,,,,,,,,,1,EA03-430-2508,,189.0,,,,,
+,,,,,,,,,,,,,,1227.0,,,,,

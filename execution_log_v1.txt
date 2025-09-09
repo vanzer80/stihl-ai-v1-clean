@@ -1,0 +1,64 @@
+Histórico de comandos executados:
+
+unzip ComocriarbancodedadosnoSupabaseparaIA_\(1\).zip -d /home/ubuntu/stihl_ai_project_v1/
+ls -F /home/ubuntu/stihl_ai_project_v1/
+git init
+gh repo create stihl-ai-v1 --public --source=. --description "Sistema de Busca Inteligente de Produtos STIHL (versão 1)"
+git add .
+git commit -m "Initial commit of STIHL AI v1 project"
+git push origin master
+rm -rf .git
+rm -rf stihl_ai_project_v1
+git clone https://github.com/vanzer80/stihl-ai-v1.git
+unzip HowtoCreateaDatabaseinSupabaseforAI.zip -d /home/ubuntu/temp_stihl_ai_project/
+rm -rf stihl-ai-v1
+mkdir stihl-ai-v1-clean
+cp -r /home/ubuntu/temp_stihl_ai_project/* /home/ubuntu/stihl-ai-v1-clean/
+rm /home/ubuntu/stihl-ai-v1-clean/pasted_content.txt "/home/ubuntu/stihl-ai-v1-clean/Pré-requisitos para o Deploy do Sistema STIHL AI.md" /home/ubuntu/stihl-ai-v1-clean/prerequisites.md
+ls -F /home/ubuntu/stihl-ai-v1-clean/
+rm -rf stihl-ai-v1-clean
+git clone https://github.com/vanzer80/stihl-ai-v1.git
+rm -rf stihl-ai-v1
+mkdir stihl-ai-v1-clean
+unzip HowtoCreateaDatabaseinSupabaseforAI.zip -d /home/ubuntu/temp_stihl_ai_project/
+A
+rm -rf temp_stihl_ai_project
+git clone https://github.com/vanzer80/stihl-ai-v1.git
+rm -rf stihl-ai-v1
+mkdir stihl-ai-v1-clean
+cp -r /home/ubuntu/temp_stihl_ai_project/* /home/ubuntu/stihl-ai-v1-clean/
+unzip ComocriarbancodedadosnoSupabaseparaIA_\(1\).zip -d /home/ubuntu/stihl_ai_project_v1_clean/
+rm -rf stihl_ai_project_v1_clean
+rm -rf stihl-ai-v1
+mkdir stihl-ai-v1-clean
+unzip ComocriarbancodedadosnoSupabaseparaIA_\(1\).zip -d /home/ubuntu/stihl-ai-v1-clean/
+rm /home/ubuntu/stihl-ai-v1-clean/pasted_content.txt "/home/ubuntu/stihl-ai-v1-clean/Pré-requisitos para o Deploy do Sistema STIHL AI.md" /home/ubuntu/stihl-ai-v1-clean/prerequisites.md
+git init
+gh repo create stihl-ai-v1-clean --public --source=. --description "Sistema de Busca Inteligente de Produtos STIHL (versão 1) - Repositório Limpo"
+git add .
+git commit -m "Initial commit of STIHL AI v1 clean project"
+git push origin master
+sudo apt-get update && sudo apt-get install -y postgresql-client
+sudo mkdir -p /tmp/csv_data/ && sudo chown ubuntu:ubuntu /tmp/csv_data/
+unzip csv_outputs_v5.zip -d /home/ubuntu/stihl-ai-v1-clean/csv_outputs_v5/
+cp /home/ubuntu/stihl-ai-v1-clean/csv_outputs_v5/*.csv /tmp/csv_data/
+PGPASSWORD=rBVm2mIQds3PneOy psql -h db.eclmgkajlhrstyyhejev.supabase.co -U postgres -d postgres -f create_tables_v5.sql
+ping -c 4 db.eclmgkajlhrstyyhejev.supabase.co
+dig aws-1-sa-east-1.pooler.supabase.com
+sudo apt-get update && sudo apt-get install -y dnsutils
+dig aws-1-sa-east-1.pooler.supabase.com
+nc -vz aws-1-sa-east-1.pooler.supabase.com 6543
+sudo apt-get update && sudo apt-get install -y netcat-traditional
+nc -vz aws-1-sa-east-1.pooler.supabase.com 6543
+psql "postgresql://postgres.eclmgkajlhrstyyhejev:rBVm2mIQds3PneOy@aws-1-sa-east-1.pooler.supabase.com:6543/postgres" -c "\dt"
+q
+PGPASSWORD=rBVm2mIQds3PneOy psql -h aws-1-sa-east-1.pooler.supabase.com -p 6543 -U postgres -d postgres -f create_tables_v5.sql
+PGPASSWORD=rBVm2mIQds3PneOy psql "postgresql://postgres.eclmgkajlhrstyyhejev:rBVm2mIQds3PneOy@aws-1-sa-east-1.pooler.supabase.com:6543/postgres" -f create_tables_v5.sql
+PGPASSWORD=rBVm2mIQds3PneOy psql "postgresql://postgres.eclmgkajlhrstyyhejev:rBVm2mIQds3PneOy@aws-1-sa-east-1.pooler.supabase.com:6543/postgres" -f 02_create_functions_v5.sql
+PGPASSWORD=rBVm2mIQds3PneOy psql "postgresql://postgres.eclmgkajlhrstyyhejev:rBVm2mIQds3PneOy@aws-1-sa-east-1.pooler.supabase.com:6543/postgres" -f 05_import_csv_data_v5.sql
+PGPASSWORD=rBVm2mIQds3PneOy psql "postgresql://postgres.eclmgkajlhrstyyhejev:rBVm2mIQds3PneOy@aws-1-sa-east-1.pooler.supabase.com:6543/postgres" -c "\copy ms (unnamed_2, codigo_material, preco_real, qtde_min, descricao, cilindrada_cm3, pot, unnamed_10, sabre, corrente, unnamed_13, unnamed_14, capacidade_do_tanque_de_combustivel_l, capacidade_do_tanque_de_oleo_l, peso_kg, s, t, ipi, ncm_classif_fiscal, cod_barras) FROM 
+'/tmp/csv_data/ms.csv' WITH (FORMAT csv, HEADER true, DELIMITER ",", ENCODING "UTF8", NULL "");"
+PGPASSWORD=rBVm2mIQds3PneOy psql "postgresql://postgres.eclmgkajlhrstyyhejev:rBVm2mIQds3PneOy@aws-1-sa-east-1.pooler.supabase.com:6543/postgres" -c "\copy rocadeiras_e_impl (unnamed_2, unnamed_4, codigo_material, preco_real, qtde_min, descricao, cilindrada_cm3, pot, unnamed_11, peso, conjunto_de_corte, s, t, ipi, ncm_classif_fiscal, cod_barras) FROM 
+'/tmp/csv_data/rocadeiras_e_impl.csv' WITH (FORMAT csv, HEADER true, DELIMITER ",", ENCODING "UTF8", NULL "");"
+
+
