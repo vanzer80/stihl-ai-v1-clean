@@ -7,7 +7,7 @@ from flask_cors import CORS
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 # Importa blueprint e inicializador do motor de busca v5
-from routes.search_api_v5 import search_bp, init_search_engine
+from src.routes.search_api_v5 import search_bp, init_search_engine
 
 def create_app():
     app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
