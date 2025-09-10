@@ -2,12 +2,15 @@ import os
 import sys
 from flask import Flask, jsonify, send_from_directory
 from flask_cors import CORS
+from dotenv import load_dotenv
 
 # Garantir import do pacote src/*
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+load_dotenv()
 
 # Importa blueprint e inicializador do motor de busca v5
 from src.routes.search_api_v5 import search_bp, init_search_engine
+from src.routes.telegram_webhook import telegram_bp
 
 def create_app():
     app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
@@ -39,6 +42,7 @@ def create_app():
 
     # Registrar rotas de busca sob /api/search
     app.register_blueprint(search_bp)
+    app.register_blueprint(telegram_bp, url_prefix="/bot/telegram")
 
     # Servir arquivos estáticos de src/static
     @app.route('/', defaults={'path': ''})
