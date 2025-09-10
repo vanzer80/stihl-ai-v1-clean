@@ -135,7 +135,7 @@ def intelligent_search():
             }
             
             if include_details:
-                result_data['modelos_compatibilidade'] = result.modelos_compatibilidade
+                result_data['modelos'] = result.modelos
                 result_data['detalhes_tecnicos'] = result.detalhes_tecnicos
             
             response_data['results'].append(result_data)
@@ -200,7 +200,7 @@ def get_product_by_code(code: str):
                 'descricao': result.descricao,
                 'preco_real': result.preco_real,
                 'categoria_produto': result.categoria_produto,
-                'modelos_compatibilidade': result.modelos_compatibilidade,
+                'modelos': result.modelos,
                 'detalhes_tecnicos': result.detalhes_tecnicos
             },
             'compatible_products': [
@@ -209,7 +209,7 @@ def get_product_by_code(code: str):
                     'descricao': comp.descricao,
                     'preco_real': comp.preco_real,
                     'categoria_produto': comp.categoria_produto,
-                    'tipo_compatibilidade': comp.modelos_compatibilidade
+                    'tipo_compatibilidade': comp.modelos
                 }
                 for comp in compatible_products[:10]  # Limitar a 10 produtos compatíveis
             ]
@@ -257,7 +257,7 @@ def get_compatible_products(model: str):
                     'descricao': result.descricao,
                     'preco_real': result.preco_real,
                     'categoria_produto': result.categoria_produto,
-                    'tipo_compatibilidade': result.modelos_compatibilidade
+                    'tipo_compatibilidade': result.modelos
                 }
                 for result in results
             ]
@@ -316,7 +316,7 @@ def get_recommendations():
                     'descricao': result.descricao,
                     'preco_real': result.preco_real,
                     'categoria_produto': result.categoria_produto,
-                    'motivo_recomendacao': result.modelos_compatibilidade,
+                    'motivo_recomendacao': result.modelos,
                     'score_recomendacao': result.relevance_score
                 }
                 for result in results

@@ -1,0 +1,53 @@
+import os, requests
+from flask import Blueprint, request, jsonify, current_app
+from ..services.parts_assistant import search_and_format
+
+bp_telegram = Blueprint("telegram_webhook", __name__)
+
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+WEBHOOK_SECRET = os.getenv("TELEGRAM_WEBHOOK_SECRET", "")
+TG_API = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}"
+
+def send_msg(chat_id, text):
+    try:
+        requests.post(f"{TG_API}/sendMessage", json={
+            "chat_id": chat_id,
+            "text": text,
+            "parse_mode": "Markdown"
+        }, timeout=10)
+    except Exception as e:
+        current_app.logger.exception("telegram sendMessage failed: %s", e)
+
+@bp_telegram.route("/bot/telegram/webhook/health", methods=["GET"])
+def health():
+    return jsonify({"ok": True, "message": "telegram webhook up"})
+
+@bp_telegram.route("/bot/telegram/webhook", methods=["POST"])
+def webhook():
+    # Verifica secret do header (opcional mas recomendado)
+    secret = request.headers.get("X-Telegram-Bot-Api-Secret-Token", "")
+    if WEBHOOK_SECRET and secret != WEBHOOK_SECRET:
+        return jsonify({"ok": False, "error": "invalid secret"}), 403
+
+    payload = request.get_json(force=True, silent=True) or {}
+    msg = payload.get("message") or {}
+    chat = (msg.get("chat") or {}).get("id")
+    text = (msg.get("text") or "").strip()
+
+    if not chat or not text:
+        return jsonify({"ok": True})
+
+    if text.startswith("/start"):
+        send_msg(chat, "Olá! Envie nome do produto, código (ex.: `4147-141-0300`) ou termos como `filtro de ar FS221`.")
+        return jsonify({"ok": True})
+    if text.startswith("/help"):
+        send_msg(chat, "Dicas: use o modelo (FS, FR, MS) e o tipo de peça (filtro, carburador, silenciador).")
+        return jsonify({"ok": True})
+
+    try:
+        res = search_and_format(text)
+        send_msg(chat, res.get("reply_markdown", "Não consegui processar sua consulta."))
+    except Exception as e:
+        current_app.logger.exception("assistant error: %s", e)
+        send_msg(chat, "❌ Ocorreu um erro ao processar sua consulta.")
+    return jsonify({"ok": True})
