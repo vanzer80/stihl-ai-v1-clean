@@ -44,7 +44,7 @@ class SearchResult:
     codigo_material: str
     descricao: str
     preco_real: float
-    modelos_compatibilidade: str
+    modelos: str
     categoria_produto: str
     relevance_score: float
     detalhes_tecnicos: Optional[str] = None
@@ -334,7 +334,7 @@ class IntelligentSearchV5:
                             codigo_material=row['codigo_material'],
                             descricao=row['descricao'],
                             preco_real=float(row['preco_real']) if row['preco_real'] else 0.0,
-                            modelos_compatibilidade=row['modelos_compatibilidade'] or '',
+                            modelos=row['modelos'] or '',
                             categoria_produto=row['categoria_produto'],
                             relevance_score=float(row['relevance_score']) if row['relevance_score'] else 0.0
                         )
@@ -371,7 +371,7 @@ class IntelligentSearchV5:
                             codigo_material=row['codigo_material'],
                             descricao=row['descricao'],
                             preco_real=float(row['preco_real']) if row['preco_real'] else 0.0,
-                            modelos_compatibilidade=row['modelos_compatibilidade'] or '',
+                            modelos=row['modelos'] or '',
                             categoria_produto=row['categoria_produto'],
                             relevance_score=1.0,
                             detalhes_tecnicos=row['detalhes_tecnicos']
@@ -409,7 +409,7 @@ class IntelligentSearchV5:
                             codigo_material=row['codigo_material'],
                             descricao=row['descricao'],
                             preco_real=float(row['preco_real']) if row['preco_real'] else 0.0,
-                            modelos_compatibilidade=row['tipo_compatibilidade'],
+                            modelos=row['tipo_compatibilidade'],
                             categoria_produto=row['categoria_produto'],
                             relevance_score=0.8
                         )
@@ -451,7 +451,7 @@ class IntelligentSearchV5:
                             codigo_material=row['codigo_material'],
                             descricao=row['descricao'],
                             preco_real=float(row['preco_real']) if row['preco_real'] else 0.0,
-                            modelos_compatibilidade=row['motivo_recomendacao'],
+                            modelos=row['motivo_recomendacao'],
                             categoria_produto=row['categoria_produto'],
                             relevance_score=float(row['score_recomendacao']) / 100.0
                         )
@@ -550,7 +550,7 @@ class IntelligentSearchV5:
                     'descricao': result.descricao,
                     'preco': result.preco_real,
                     'categoria': result.categoria_produto,
-                    'compatibilidade': result.modelos_compatibilidade
+                    'compatibilidade': result.modelos
                 })
             
             system_prompt = """
@@ -590,7 +590,7 @@ class IntelligentSearchV5:
             # Fallback para resposta simples
             if len(results) == 1:
                 result = results[0]
-                return f"Encontrei o produto: {result.descricao} (Código: {result.codigo_material}) por R$ {result.preco_real:.2f}. {result.modelos_compatibilidade}"
+                return f"Encontrei o produto: {result.descricao} (Código: {result.codigo_material}) por R$ {result.preco_real:.2f}. {result.modelos}"
             else:
                 return f"Encontrei {len(results)} produtos relacionados à sua busca. O primeiro é: {results[0].descricao} (Código: {results[0].codigo_material}) por R$ {results[0].preco_real:.2f}."
 
