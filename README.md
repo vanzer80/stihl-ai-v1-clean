@@ -12,8 +12,8 @@ O diretório `/home/ubuntu/stihl_ai_v1_consolidated_output/` contém os seguinte
 *   `02_create_functions_v5.sql`: Script SQL para a criação de funções e procedimentos armazenados no banco de dados.
 *   `04_security_rls_v5.sql`: Script SQL para a configuração de políticas de Row Level Security (RLS) no Supabase.
 *   `05_import_csv_data_v5.sql`: Script SQL para a importação de dados de arquivos CSV para as tabelas do banco de dados. **Este script foi modificado para usar `\copy` em vez de `COPY` para compatibilidade com `psql -c` e para tentar resolver problemas de permissão.**
-*   `csv_outputs_v5/`: Diretório contendo os arquivos CSV originais para importação.
-*   `ms.csv`, `rocadeiras_e_impl.csv`, etc.: Arquivos CSV individuais (também presentes em `csv_outputs_v5/`).
+*   `csv_data/`: Diretório contendo os arquivos CSV originais para importação.
+*   `ms.csv`, `rocadeiras_e_impl.csv`, etc.: Arquivos CSV individuais (também presentes em `csv_data/`).
 *   `requirements.txt`: Lista de dependências Python para a aplicação Flask.
 *   `search_api_v5.py` ou `intelligent_search_v5.py` (a ser confirmado): O arquivo principal da aplicação Flask (backend).
 *   `execution_log_v1.txt`: Um log detalhado de todos os comandos e ações executadas durante o processo de implantação até o momento.
