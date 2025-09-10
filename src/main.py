@@ -1,3 +1,4 @@
+from src.routes.assistant import bp_assistant
 import os
 import sys
 from flask import Flask, jsonify, send_from_directory
@@ -14,6 +15,7 @@ from src.routes.telegram_webhook import telegram_bp
 
 def create_app():
     app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
+    app.register_blueprint(bp_assistant)
     app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'change-me')
     app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50MB
 
