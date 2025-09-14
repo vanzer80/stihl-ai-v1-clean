@@ -1,78 +1,296 @@
-# Sistema de Busca Inteligente STIHL AI v1 - Implantação
+# Sistema de Busca Inteligente STIHL AI v1 — Implantação (API + WhatsApp + Telegram + PDFs)
 
-## Visão Geral do Projeto
+## 🎯 Visão Geral
+O **STIHL AI v1** permite buscar **peças, códigos, preços e compatibilidades** de produtos STIHL via **API Flask**, **WhatsApp** e **Telegram**.  
+Agora o sistema consulta **vistas explodidas em PDF** (manuais/catálogos) para **confirmar códigos e posições** de peças, citando **fonte e página**.
 
-Este projeto tem como objetivo a implantação de um sistema de busca inteligente para produtos STIHL. Ele consiste em um backend baseado em Flask que interage com um banco de dados PostgreSQL hospedado no Supabase. O sistema foi projetado para permitir consultas eficientes sobre o catálogo de produtos STIHL, utilizando dados importados de arquivos CSV.
+**Componentes**
+- Backend: **Flask** (`intelligent_search_v5.py`) + Gunicorn
+- Banco: **PostgreSQL (Supabase)** — tabelas catálogo + **pgvector** para PDFs
+- Armazenamento: **Supabase Storage** (bucket `manuals/` para PDFs/imagens)
+- Canais: **WhatsApp Business API** e **Telegram Bot**
+- Proxy: **Caddy** (alternativa: Nginx)
 
-## Estrutura do Projeto
-
-O diretório `/home/ubuntu/stihl_ai_v1_consolidated_output/` contém os seguintes arquivos e subdiretórios:
-
-*   `01_create_tables_v5.sql`: Script SQL para a criação das tabelas do banco de dados.
-*   `02_create_functions_v5.sql`: Script SQL para a criação de funções e procedimentos armazenados no banco de dados.
-*   `04_security_rls_v5.sql`: Script SQL para a configuração de políticas de Row Level Security (RLS) no Supabase.
-*   `05_import_csv_data_v5.sql`: Script SQL para a importação de dados de arquivos CSV para as tabelas do banco de dados. **Este script foi modificado para usar `\copy` em vez de `COPY` para compatibilidade com `psql -c` e para tentar resolver problemas de permissão.**
-*   `csv_data/`: Diretório contendo os arquivos CSV originais para importação.
-*   `ms.csv`, `rocadeiras_e_impl.csv`, etc.: Arquivos CSV individuais (também presentes em `csv_data/`).
-*   `requirements.txt`: Lista de dependências Python para a aplicação Flask.
-*   `search_api_v5.py` ou `intelligent_search_v5.py` (a ser confirmado): O arquivo principal da aplicação Flask (backend).
-*   `execution_log_v1.txt`: Um log detalhado de todos os comandos e ações executadas durante o processo de implantação até o momento.
-*   `prompt_for_next_ai_v1.md`: O prompt detalhado que foi fornecido para a próxima IA, contendo o contexto, o estado atual e os próximos passos.
-*   `master_prompt_for_cursor_ai.md`: Este documento, que serve como o roteiro completo para a IA do Cursor.
-
-## Configuração do Supabase
-
-O banco de dados PostgreSQL está hospedado no Supabase. As tabelas e funções foram criadas com sucesso. As credenciais de conexão são:
-
-*   **Host**: `aws-1-sa-east-1.pooler.supabase.com`
-*   **Porta**: `6543`
-*   **Usuário**: `postgres.eclmgkajlhrstyyhejev`
-*   **Senha**: `rBVm2mIQds3PneOy`
-*   **Banco de Dados**: `postgres`
-
-## Importação de Dados
-
-A importação inicial de dados foi realizada utilizando o script `05_import_csv_data_v5.sql`. A importação do arquivo `ms.csv` foi bem-sucedida. No entanto, a importação de `rocadeiras_e_impl.csv` falhou devido a uma restrição `NOT NULL` na coluna `codigo_material` da tabela `rocadeiras_e_impl`, indicando que o CSV pode conter valores nulos para essa coluna. Este é o principal ponto de parada atual do projeto e o foco da Tarefa 1 no `master_prompt_for_cursor_ai.md`.
-
-Os arquivos CSV para importação estão localizados em `/tmp/csv_data/` (copiados do `csv_outputs_v5.zip`).
-
-## Aplicação Flask
-
-A aplicação Flask é o componente de backend responsável por interagir com o banco de dados e fornecer a funcionalidade de busca. O arquivo principal da aplicação ainda precisa ser confirmado (provavelmente `search_api_v5.py` ou `intelligent_search_v5.py`). As dependências Python estão listadas em `requirements.txt`.
-
-## Configuração do Servidor (Nginx/Gunicorn)
-
-Para a implantação em ambiente de produção, a aplicação Flask será servida por Gunicorn e exposta via Nginx como um proxy reverso. As configurações detalhadas para isso estão descritas na Tarefa 5 do `master_prompt_for_cursor_ai.md`.
-
-## Como Usar (Próximos Passos)
-
-Para continuar o desenvolvimento e a implantação deste projeto, siga as instruções detalhadas no arquivo `master_prompt_for_cursor_ai.md`. Ele descreve as tarefas restantes, incluindo:
-
-1.  **Análise e Resolução do Problema de Importação de Dados**: Foco na correção do problema com `rocadeiras_e_impl.csv` e na importação dos demais CSVs.
-2.  **Concluir a Importação de Dados**: Garantir que todos os dados sejam importados com sucesso.
-3.  **Aplicar Regras de Segurança (RLS)**: Executar o script `04_security_rls_v5.sql`.
-4.  **Preparar e Implantar a Aplicação Flask**: Instalar dependências, identificar o arquivo principal da aplicação e testá-la localmente.
-5.  **Configurar Nginx e Gunicorn**: Configurar os servidores para acesso público da aplicação.
-6.  **Testes de Integração e Validação**: Realizar testes completos para garantir a funcionalidade de ponta a ponta.
-7.  **Documentação Final e Entrega**: (Esta etapa está sendo concluída agora).
-
-## Credenciais
-
-As credenciais do Supabase foram fornecidas no início deste documento e no `master_prompt_for_cursor_ai.md`.
-
-## Próximos Passos/Melhorias
-
-Após a conclusão da implantação básica, as seguintes melhorias podem ser consideradas:
-
-*   Implementar um sistema de log mais robusto para a aplicação Flask.
-*   Adicionar autenticação e autorização de usuários na aplicação Flask.
-*   Desenvolver uma interface de usuário (frontend) para interagir com a API de busca.
-*   Otimizar o desempenho das consultas SQL e da aplicação Flask.
-*   Explorar a integração com outras funcionalidades do Supabase (ex: Realtime, Storage).
+**Repositório**: `https://github.com/vanzer80/stihl-ai-v1-clean`  
+**VPS (padrão)**: `/home/ubuntu/stihl_ai_v1_consolidated_output/`
 
 ---
 
-**Autor:** Manus AI
-**Data:** Setembro de 2025
+## 🧱 Estrutura de Pastas (VPS)
+- `01_create_tables_v5.sql` — tabelas catálogo/peças  
+- `02_create_functions_v5.sql` — funções/procedures  
+- `04_security_rls_v5.sql` — políticas RLS catálogo  
+- `05_import_csv_data_v5.sql` — importação CSV com `\copy`  
+- `06_docs_schema.sql` — **NOVO**: esquema PDFs (docs/doc_pages/doc_chunks/part_refs)  
+- `csv_data/` — CSVs originais  
+- `requirements.txt` — dependências Python  
+- `intelligent_search_v5.py` — **entrypoint** backend (validar no deploy)  
+- `execution_log_v1.txt` — log de implantação  
+- `prompt_for_next_ai_v1.md` / `master_prompt_for_cursor_ai.md` — contexto/roadmap
 
+---
 
+## 🔐 Variáveis de Ambiente (NUNCA no README público)
+Crie um `.env` com:
+SUPABASE_URL=...
+SUPABASE_ANON_KEY=...
+SUPABASE_SERVICE_ROLE_KEY=...
+SUPABASE_DB_URL=postgres://<user>:<pass>@aws-1-sa-east-1.pooler.supabase.com:6543/postgres
+EMBEDDINGS_PROVIDER=openai|azure|local
+EMBEDDINGS_DIM=1536
+
+bash
+Copiar código
+
+**(VPS)**
+```bash
+# carregar env (exemplo)
+set -a; source /path/to/.env; set +a
+🗄️ Banco de Dados — Catálogo (Supabase)
+Use 01_create_tables_v5.sql, 02_create_functions_v5.sql e 04_security_rls_v5.sql.
+
+Problema conhecido: rocadeiras_e_impl.csv falha por codigo_material nulo.
+
+Qualidade de Dados antes de importar
+(Mint/WSL/PC)
+
+bash
+Copiar código
+# ver nulos, linhas vazias e contagem distinta do codigo_material
+csvcut -n rocadeiras_e_impl.csv | cat
+# ajuste sugerido: preencher codigo_material ausente ou remover linhas inválidas
+(Editor SQL do Supabase) – alternativa (forçar limpeza mínima, se optar):
+
+sql
+Copiar código
+-- Permitir staging temporário sem NOT NULL, tratar e mover p/ tabela final.
+-- Recomendado: concertar o CSV na origem. Não alterar constraint de produção.
+(VPS)
+
+bash
+Copiar código
+# Importar somente após saneamento
+psql "$SUPABASE_DB_URL" -f 05_import_csv_data_v5.sql
+📚 PDFs de Vistas Explodidas — Esquema e ETL
+Extensões e Tabelas
+(Editor SQL do Supabase)
+
+sql
+Copiar código
+create extension if not exists pg_trgm;
+create extension if not exists vector;
+
+create table if not exists docs (
+  id uuid primary key default gen_random_uuid(),
+  title text not null,
+  model_norm text,              -- ex.: 'FS 220'
+  source text,
+  storage_path text not null,   -- 'manuals/.../arquivo.pdf'
+  page_count int,
+  created_at timestamptz default now()
+);
+
+create table if not exists doc_pages (
+  doc_id uuid references docs(id) on delete cascade,
+  page_no int not null,
+  text_content text,
+  image_path text,              -- 'manuals/.../pages/arquivo-pNN.png'
+  primary key (doc_id, page_no)
+);
+
+-- Ajuste EMBEDDINGS_DIM conforme seu provedor (padrão 1536)
+create table if not exists doc_chunks (
+  id bigserial primary key,
+  doc_id uuid references docs(id) on delete cascade,
+  page_no int not null,
+  chunk_no int not null,
+  chunk_text text not null,
+  embedding vector(1536)
+);
+
+create table if not exists part_refs (
+  part_number text not null,
+  doc_id uuid references docs(id) on delete cascade,
+  page_no int not null,
+  callout_label text,
+  bbox jsonb,                   -- {"x":0.12,"y":0.34,"w":0.08,"h":0.07}
+  notes text,
+  primary key (part_number, doc_id, page_no, callout_label)
+);
+
+create index if not exists idx_docs_model on docs using gin (model_norm gin_trgm_ops);
+create index if not exists idx_doc_pages_text on doc_pages using gin (text_content gin_trgm_ops);
+create index if not exists idx_doc_chunks_doc_page on doc_chunks (doc_id, page_no);
+
+-- exemplo de busca semântica (cosine)
+create or replace function search_doc_chunks(q vector(1536), k int default 10)
+returns table (doc_id uuid, page_no int, chunk_no int, chunk_text text, score float)
+language sql stable as $$
+  select c.doc_id, c.page_no, c.chunk_no, c.chunk_text,
+         1 - (c.embedding <=> q) as score
+  from doc_chunks c
+  order by c.embedding <=> q
+  limit k
+$$;
+
+-- RLS (ajuste conforme sua auth):
+alter table docs enable row level security;
+alter table doc_pages enable row level security;
+alter table doc_chunks enable row level security;
+alter table part_refs enable row level security;
+
+create policy "public_read_docs"       on docs       for select using (true);
+create policy "public_read_doc_pages"  on doc_pages  for select using (true);
+create policy "public_read_doc_chunks" on doc_chunks for select using (true);
+create policy "public_read_part_refs"  on part_refs  for select using (true);
+Bucket no Storage
+(Supabase Console → Storage)
+
+Criar bucket manuals (leitura pública ou assinada, conforme estratégia).
+
+storage_path: manuals/stihl/<modelo>/arquivo.pdf
+
+image_path: manuals/stihl/<modelo>/pages/arquivo-pNN.png
+
+ETL de PDFs (upload, render, OCR, chunks, embeddings)
+(VPS)
+
+bash
+Copiar código
+mkdir -p /opt/stihl-pdf-ingest && cd /opt/stihl-pdf-ingest
+python3 -m venv .venv && source .venv/bin/activate
+pip install pymupdf psycopg2-binary supabase Pillow tiktoken
+(VPS)
+
+bash
+Copiar código
+# Executar: python ingest_pdf.py /tmp/SR430.pdf "SR 430" "SR 430 - Exploded View" "stihl.com"
+# O script deve:
+# 1) subir PDF no bucket 'manuals'
+# 2) gerar PNG por página
+# 3) extrair texto
+# 4) chunkear + gerar embeddings (dim == EMBEDDINGS_DIM)
+# 5) popular docs/doc_pages/doc_chunks
+Modelo CSV p/ part_refs (opcional)
+
+sql
+Copiar código
+part_number,model_norm,doc_title,page_no,callout_label,bbox_json,notes
+1234-567-8900,SR 430,SR 430 - Exploded View,3,"12","{""x"":0.12,""y"":0.34,""w"":0.08,""h"":0.07}","Impulsor"
+(VPS)
+
+bash
+Copiar código
+psql "$SUPABASE_DB_URL" -c "\copy part_refs FROM '/tmp/part_refs.csv' csv header"
+🔎 Normalização e Regras de Busca
+Modelos: FS220 → FS 220 (inserir espaço entre letras/números; prefixos em maiúsculas)
+
+Ruído: remover sufixos como (110/220V), /C, etc.
+
+Sinônimos: ex.: “cabeçote de corte” ≈ “autocut”; “carcaça do ventilador” ≈ “blower housing”
+
+Rank fusion: combinar resultado do catálogo (precisão por código/descrição) com PDFs (confirmação por página/callout)
+
+🧩 API — Endpoints
+GET /api/parts/search?q=&model= → busca catálogo (código/descrição/compat)
+
+GET /api/parts/refs?part_number= → onde aparece nos manuais (doc_id, page, callout, bbox)
+
+GET /api/docs/search?q=&model=&k=10 → busca semântica em doc_chunks
+
+GET /api/docs/page?doc_id=&page_no= → retorna texto + URLs (PDF e imagem da página)
+
+Resposta deve sempre “CITAR A FONTE”: manual + página, e retornar link da página (Storage).
+
+💬 Canais (WhatsApp / Telegram)
+WhatsApp (cliente final): respostas curtas, preço/código, link da página; se ambíguo → pedir foto ou nº do item.
+
+Telegram (técnico): listas, múltiplos resultados, anexar PDF ou imagem da página, detalhar especificações.
+
+Escalonamento (mensagem padrão):
+
+“Para garantir total precisão, vou conectar você com nosso especialista. Ele já receberá: [resumo das informações coletadas].”
+
+🚀 Deploy do Backend
+Dependências
+(VPS)
+
+bash
+Copiar código
+cd /home/ubuntu/stihl_ai_v1_consolidated_output
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+Execução local
+(VPS)
+
+bash
+Copiar código
+export FLASK_APP=intelligent_search_v5.py
+flask run --host 0.0.0.0 --port 8000
+Gunicorn (produção)
+(VPS)
+
+bash
+Copiar código
+pip install gunicorn
+gunicorn -w 3 -b 127.0.0.1:8000 intelligent_search_v5:app
+Caddy (reverse proxy)
+(VPS)
+
+bash
+Copiar código
+# Exemplo Caddyfile (ajuste domínio/https conforme tua infra)
+:80 {
+  route /api/* {
+    reverse_proxy 127.0.0.1:8000
+  }
+  # Opcional: servir /healthz
+}
+(Alternativa Nginx disponível, mas preferimos Caddy por já estar na tua stack.)
+
+✅ Testes Rápidos (smoke)
+(VPS)
+
+bash
+Copiar código
+curl "http://127.0.0.1:8000/api/parts/search?q=carcaca%20ventilador&model=SR%20430"
+curl "http://127.0.0.1:8000/api/docs/search?q=carcaca%20ventilador&model=SR%20430&k=5"
+curl "http://127.0.0.1:8000/api/parts/refs?part_number=1234-567-8900"
+Critérios: resposta cita manual+página, traz link da imagem, e não inventa informação.
+
+🔒 Segurança
+RLS habilitado (catálogo e PDFs)
+
+anon vs service-role:
+
+Bots/API pública → anon com SELECT restrito
+
+ETL → service-role (upload, inserções)
+
+Segredos apenas no .env / gerenciador de segredos
+
+Sanitizar inputs (SQL params, não string concat)
+
+🗺️ Próximas Tarefas (ordem sugerida)
+Sanear rocadeiras_e_impl.csv e concluir importação de todos os CSVs.
+
+Criar bucket manuals/ e ingestar o PDF de exemplo.
+
+Implementar get_embedding() no ETL (dim == EMBEDDINGS_DIM).
+
+Publicar endpoints /api/docs/* e /api/parts/refs.
+
+Ajustar respostas dos bots para citar manual+página e anexar imagem.
+
+Configurar Webhooks: WhatsApp Business API e Telegram Bot.
+
+Observabilidade: logs por canal + Uptime-Kuma.
+
+Documentar sinônimos e regras de normalização (manter arquivo dedicado).
+
+📌 Notas Finais
+Se a IA não tiver certeza absoluta, não responde com suposição: pede mais detalhes ou escalona para humano.
+
+Manter coerência de nomenclatura: repo, pasta VPS, entrypoint.
+
+Todas as respostas devem ser auditáveis (citar fontes).
